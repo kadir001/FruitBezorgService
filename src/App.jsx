@@ -4,6 +4,7 @@ import "./App.css";
 import Form from "./components/Form.jsx";
 import FruitList from "./components/FruitList.jsx";
 import ResetButton from "./components/Resetbutton.jsx";
+import FruitTotal from "./components/FruitTotal.jsx";
 
 function App() {
     const [fruits, setFruits] = useState([
@@ -44,34 +45,18 @@ function App() {
         <>
             <h1>Fruitmand bezorgservice</h1>
 
-            <div className="counter-images">
-                {fruits.map((fruit) => (
-                    <div className="fruit-counter" key={fruit.id}>
-                        <h2>{fruit.name}</h2>
+            <FruitList
+                fruits={fruits}
+                updateCounter={updateCounter}
+            />
 
-                        <button
-                            onClick={() => updateCounter(fruit.id, -1)}
-                        >
-                            -
-                        </button>
+            <FruitTotal fruits={fruits} />
 
-                        <span>{fruit.count}</span>
+            <ResetButton resetCounters={resetCounters} />
 
-                        <button
-                            onClick={() => updateCounter(fruit.id, 1)}
-                        >
-                            +
-                        </button>
-                    </div>
-                ))}
+            <Form />
 
-                <h3>Totaal geselecteerd fruit: {totalFruits}</h3>
 
-                <ResetButton resetCounters={resetCounters} />
-
-                <Form />
-
-            </div>
         </>
     );
 }
