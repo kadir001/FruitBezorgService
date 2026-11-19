@@ -1,33 +1,6 @@
-.counter-images {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 50%;
-    height: 50%;
-    position: relative;
-    overflow: hidden;
-    border: black solid 1px;
-    border-radius: 10px;
 
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
 }
-.fruit-counter {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-.resetButton {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    left: 50%;
-    transform: translateX(-250%);
 
-}
