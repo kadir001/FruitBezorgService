@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form.jsx";
-
+import FruitList from "./components/FruitList.jsx";
 import ResetButton from "./components/Resetbutton.jsx";
 
 function App() {
