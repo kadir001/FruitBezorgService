@@ -36,10 +36,7 @@ function App() {
         );
     }
 
-    const totalFruits = fruits.reduce(
-        (total, fruit) => total + fruit.count,
-        0
-    );
+
 
     return (
         <>
