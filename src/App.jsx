@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form.jsx";
 
+import ResetButton from "./components/Resetbutton.jsx";
+
 function App() {
     const [fruits, setFruits] = useState([
         { id: 1, name: "🍏 Appel", count: 0 },
@@ -73,6 +75,7 @@ function App() {
                 </button>
 
                 <Form />
+                <ResetButton resetCounters={resetCounters} />
             </div>
         </>
     );
