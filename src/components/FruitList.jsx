@@ -1,14 +1,14 @@
-import './FruitList.css';
 import FruitCounter from "./FruitCounter.jsx";
+import "./FruitList.css";
 
-function FruitList({ fruits, updateCounter }) {
+function FruitList({ fruits, handleChange }) {
     return (
         <div className="counter-images">
             {fruits.map((fruit) => (
                 <FruitCounter
                     key={fruit.id}
                     fruit={fruit}
-                    updateCounter={updateCounter}
+                    handleChange={handleChange}
                 />
             ))}
         </div>

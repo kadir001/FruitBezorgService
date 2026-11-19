@@ -14,7 +14,9 @@ function App() {
         { id: 4, name: "🥝 Kiwi", count: 0 },
     ]);
 
-    function updateCounter(id, amount) {
+    function handleChange(event, id) {
+        const amount = Number(event.target.value);
+
         setFruits((prevFruits) =>
             prevFruits.map((fruit) =>
                 fruit.id === id
@@ -44,7 +46,7 @@ function App() {
 
             <FruitList
                 fruits={fruits}
-                updateCounter={updateCounter}
+                handleChange={handleChange}
             />
 
             <FruitTotal fruits={fruits} />
