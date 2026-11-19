@@ -67,15 +67,10 @@ function App() {
 
                 <h3>Totaal geselecteerd fruit: {totalFruits}</h3>
 
-                <button
-                    className="resetButton"
-                    onClick={resetCounters}
-                >
-                    Reset alle counters
-                </button>
+                <ResetButton resetCounters={resetCounters} />
 
                 <Form />
-                <ResetButton resetCounters={resetCounters} />
+
             </div>
         </>
     );
